@@ -1,0 +1,200 @@
+/* general reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-titles);
+}
+:root {
+  /* colors */
+  --color-primary: white;
+  --color-secondary: hsl(0, 0%, 15%);
+  --color-tertiary: hsla(161, 52%, 52%, 0.5);
+  --color-accent: hsla(161, 52%, 52%);
+  --color-gradient: linear-gradient(
+    to right,
+    var(--color-accent),
+    var(--color-tertiary)
+  );
+  /* font */
+  --ff-titles: "Courier Prime", monospace;
+  --ff: "Montagu Slab", serif;
+}
+html {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+/* font-styling */
+h1 {
+  font-size: clamp(3.25rem, 3.33vw, 4.75rem);
+  line-height: 1;
+  background: var(--color-gradient);
+  background-clip: text;
+  color: transparent;
+}
+h2 {
+  font-size: clamp(1.75rem, 2.083vw, 3.25rem);
+  line-height: 2.5;
+}
+h3 {
+  font-size: clamp(1.25rem, 1.667vw, 2.75rem);
+  font-size: 2rem;
+}
+p {
+  font-size: clamp(0.5rem 1.25vw, 2rem);
+  font-size: 1.25rem;
+  opacity: 0.9;
+  font-family: var(--ff);
+}
+a {
+  font-size: clamp(0.5rem 1.25vw, 2rem);
+  font-size: 1.25rem;
+  font-family: var(--ff);
+}
+button {
+  font-size: clamp(0.25rem, 0.833vw, 1.25rem);
+  font-size: 1rem;
+}
+
+/* Header */
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: fit-content;
+  max-width: 600px;
+  margin: 16px auto;
+}
+.navbar a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: var(--color-tertiary);
+  transition: 0.5s;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.selfie img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  opacity: 0.9;
+  max-width: 450px;
+  max-height: 450px;
+}
+.intro {
+  max-width: 600px;
+  height: fit-content;
+}
+.intro button {
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--color-secondary);
+}
+.intro button:hover {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+  transition: 0.5s;
+}
+
+/* About Me */
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  min-height: 40vh;
+}
+.about-intro {
+  text-align: justify;
+  max-width: 600px;
+}
+.about-intro h2 {
+  color: var(--color-accent);
+}
+.skills {
+  max-width: 500px;
+}
+.skills p {
+  margin-bottom: 28px;
+}
+.skill {
+  color: var(--color-accent);
+  padding: 28px;
+}
+
+/* Projects */
+.projects-intro {
+  text-align: center;
+}
+.projects-intro h2 {
+  color: var(--color-accent);
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.project {
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 300px;
+  max-width: 1000px;
+  padding: 24px;
+  margin: 16px auto;
+}
+.project p {
+  line-height: 2;
+}
+.project img {
+  border-radius: 4px;
+  opacity: 0.6;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.project img:hover {
+  transition: 0.5s;
+  opacity: 1;
+}
+.project button {
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+  padding: 8px;
+  border-radius: 4px;
+}
+.project button:hover {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+  transition: 0.5s;
+}
+
+/* Footer */
+footer {
+  padding-top: 48px;
+  text-align: center;
+}
+footer i {
+  color: var(--color-accent);
+  margin: 16px;
+}
+footer i:hover {
+  color: var(--color-tertiary);
+  transition: 0.5s;
+}
